@@ -1,5 +1,5 @@
-import { getPokemon } from './generics/getPokemon';
-getPokemon(4)
-  .then((pokemon) => console.log(pokemon.name))
-  .catch((error) => console.log(error))
-  .finally(() => console.log('Final'));
+import { Pokemon } from './decorators/Pokemon-class';
+
+const charmander = new Pokemon('charmander');
+
+(Pokemon.prototype as any).customName = 'Pikachu';
